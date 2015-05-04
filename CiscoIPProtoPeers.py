@@ -85,7 +85,7 @@ def main():
             show_peers = remote_conn.recv(5000)
             return show_peers
         else:
-            return False
+            return "Couldn't generate a show protocol peers command for this device."
 
 
     parser = argparse.ArgumentParser()
@@ -132,8 +132,7 @@ def main():
                     peers = show_peers(remote_conn, os)
                     if peers:
                         print peers
-                    else:
-                        print "Couldn't generate a show protocol peers command for this device."
+
                 elif 'Cisco Nexus Operating System (NX-OS) Software' in os:
                     # NX-OS commands here.
                     show_ip_proto_cmd = "show ip route summary\n"
@@ -142,20 +141,9 @@ def main():
                     show_ip_proto_cmd = "show\n"
                 elif 'Cisco IOS Software' in os:
                     # IOS commands here.
-                    show_ip_proto_cmd = "show ip protocols summary\n"
-                    remote_conn.send(show_ip_proto_cmd)
-                    sleep(1)
-                    show_ip_proto = remote_conn.recv(5000)
-                    print show_ip_proto
-                    show_ip_proto = show_ip_proto.split("\n")
-                    show_peers_cmd = get_peers_cmd(os, show_ip_proto)
-                    if show_peers_cmd:
-                        remote_conn.send(show_peers_cmd)
-                        sleep(1)
-                        show_peers = remote_conn.recv(5000)
-                        print show_peers
-                    else:
-                        print "Couldn't generate a show protocol peers command for this device."
+                    peers = show_peers(remote_conn, os)
+                    if peers:
+                        print peers
 
 
         remote_conn.close()
