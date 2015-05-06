@@ -2,12 +2,10 @@ __author__ = 'swabyears'
 import paramiko
 import argparse
 from time import sleep
-
+import getpass
 '''
 Script to grab the IP protocols running and the peers for each protocol.
 '''
-
-
 
 def main():
 
@@ -94,7 +92,7 @@ def main():
     parser.add_argument("-l", "--log", help="Creates a local text log of the output from this script.",
                         action="store_true")
     parser.add_argument("username", help="Username to use when logging into the device(s).", type=str)
-    parser.add_argument("password", help="Password to use when logging into the device(s).", type=str)
+    # parser.add_argument("password", help="Password to use when logging into the device(s).", type=str)
     parser.add_argument("ips", help="IP address(es) of the Cisco device(s) you'd like to get information from. Comma "
                                     "separated, no spaces. Ex. 10.0.0.1,10.0.0.2", type=str)
 
@@ -106,7 +104,8 @@ def main():
     ips = args.ips
     ips = ips.split(',')
     username = args.username
-    password = args.password
+    #password = args.password
+    password = getpass.getpass()
 
     # Set some Paramiko parameters
     remote_conn_pre=paramiko.SSHClient()
