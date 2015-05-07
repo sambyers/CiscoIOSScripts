@@ -56,3 +56,37 @@ This script checks the IP protocols running on your Cisco router and returns the
 running. It supports EIGRP, OSPF, and BGP.
 
 It has been tested on IOS, IOS-XE, and NX-OS.
+
+```
+.\CiscoIPProtoPeers.py <username> 192.168.174.132
+Password:
+
+router-1>
+show ip protocols summary
+Index Process Name
+0     application
+1     connected
+2     static
+3     eigrp 1
+4     ospf 1
+5     bgp 65001
+*** IP Routing is NSF aware ***
+
+router-1>
+show ip eigrp neighbor
+EIGRP-IPv4 Neighbors for AS(1)
+H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
+                                                   (sec)         (ms)       Cnt Num
+0   10.0.0.1                Gi3                      12 00:11:12    2   100  0  1
+router-1>show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+10.0.0.1          1   FULL/BDR        00:00:35    10.0.0.1        GigabitEthernet3
+router-1>show ip bgp summary
+BGP router identifier 10.0.0.2, local AS number 65001
+BGP table version is 1, main routing table version 1
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+10.0.0.1        4        65002      16      16        1    0    0 00:11:15        0
+
+```
