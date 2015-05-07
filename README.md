@@ -10,7 +10,7 @@ These scripts have been useful to me, but idk how useful they will be for others
 ### Scripts
 * <a href='#mac2port'>mac2port</a>
   * Script that checks for a MAC address on a switch and reports back the port it lives on.
-* CiscoIPProtoPeers
+* <a href='#cipp'>CiscoIPProtoPeers</a>
   * Script that checks all of the BGP, OSPF, and EIGRP peers of this Cisco device and lists them.
 
 ### <a id='#mac2port'>mac2port</a>
@@ -49,7 +49,7 @@ Test-3560-24PS#
 0000.1234.5678 not on this switch: 10.1.1.3
 ```
 
-### CiscoIPProtoPeers
+### <a id='#cipp'>CiscoIPProtoPeers</a>
 
 This script checks the IP protocols running on your Cisco router and returns the list of peers for each protocol
 running. It supports EIGRP, OSPF, and BGP.
