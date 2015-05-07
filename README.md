@@ -10,7 +10,7 @@ These scripts have been useful to me, but idk how useful they will be for others
 ### Scripts
 * <a href='#mac2port'>mac2port</a>
   * Script that checks for a MAC address on a switch and reports back the port it lives on.
-* <a href='#cipp'>CiscoIPProtoPeers</a>
+* <a href='#ciscoipprotopeers'>CiscoIPProtoPeers</a>
   * Script that checks all of the BGP, OSPF, and EIGRP peers of this Cisco device and lists them.
 
 ### <span id='#mac2port'>mac2port</span>
