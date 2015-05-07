@@ -8,12 +8,12 @@ These scripts don't use any of the OnePK APIs. These scripts are for use with Ci
 These scripts have been useful to me, but idk how useful they will be for others. They're here if you need them.
 
 ### Scripts
-* mac2port
+* <a href='#mac2port'>mac2port</a>
   * Script that checks for a MAC address on a switch and reports back the port it lives on.
 * CiscoIPProtoPeers
   * Script that checks all of the BGP, OSPF, and EIGRP peers of this Cisco device and lists them.
 
-### mac2port
+### <a id='#mac2port'>mac2port</a>
 Quick Python script that finds the ports a MAC address lives on from Cisco IOS switches.
 
 This script requires <a href='https://github.com/paramiko/paramiko'>paramiko.</a>
