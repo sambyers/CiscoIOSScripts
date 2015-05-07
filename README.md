@@ -1,8 +1,7 @@
 # CiscoIOSScripts
 Repo for useful Cisco IOS scripts made with <a href='https://github.com/paramiko/paramiko'>paramiko</a>.
 
-Previously, I had a repo for each of the scripts, but that was messy. This will be the repo for all Cisco IOS scripts that use
-paramiko.
+Previously, I had a repo for each of the scripts, but that was messy. This will be the repo for all Cisco IOS scripts that use paramiko. This is mostly for me to learn how to use Paramiko and to see what's possible.
 
 These scripts don't use any of the OnePK APIs. These scripts are for use with Cisco devices that don't have APIs and require SSH for scripting. The scripts work with Python 2.7.8.
 
