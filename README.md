@@ -13,7 +13,7 @@ These scripts have been useful to me, but idk how useful they will be for others
 * <a href='#cipp'>CiscoIPProtoPeers</a>
   * Script that checks all of the BGP, OSPF, and EIGRP peers of this Cisco device and lists them.
 
-### <a id='#mac2port'>mac2port</a>
+### <span id='#mac2port'>mac2port</span>
 Quick Python script that finds the ports a MAC address lives on from Cisco IOS switches.
 
 This script requires <a href='https://github.com/paramiko/paramiko'>paramiko.</a>
@@ -49,7 +49,7 @@ Test-3560-24PS#
 0000.1234.5678 not on this switch: 10.1.1.3
 ```
 
-### <a id='#cipp'>CiscoIPProtoPeers</a>
+### <span id='#cipp'>CiscoIPProtoPeers</span>
 
 This script checks the IP protocols running on your Cisco router and returns the list of peers for each protocol
 running. It supports EIGRP, OSPF, and BGP.
