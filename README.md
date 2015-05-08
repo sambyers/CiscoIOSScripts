@@ -1,9 +1,11 @@
 # CiscoIOSScripts
 Repo for useful Cisco IOS scripts made with <a href='https://github.com/paramiko/paramiko'>paramiko</a>.
 
-Previously, I had a repo for each of the scripts, but that was messy. This will be the repo for all Cisco IOS scripts that use paramiko. This is mostly for me to learn how to use Paramiko and to see what's possible.
+Previously, I had a repo for each of the scripts, but that was messy. This will be the repo for all Cisco IOS scripts 
+that use paramiko. This is mostly for me to learn how to use Paramiko and to see what's possible.
 
-These scripts don't use any of the OnePK APIs. These scripts are for use with Cisco devices that don't have APIs and require SSH for scripting. The scripts work with Python 2.7.8.
+These scripts don't use any of the OnePK APIs. These scripts are for use with Cisco devices that don't have APIs and 
+require SSH for scripting. The scripts work with Python 2.7.8.
 
 These scripts have been useful to me, but idk how useful they will be for others. They're here if you need them.
 
@@ -18,7 +20,8 @@ Quick Python script that finds the ports a MAC address lives on from Cisco IOS s
 
 This script requires <a href='https://github.com/paramiko/paramiko'>paramiko.</a>
 
-The parameters for the script are your username and password for the devices, the IP(s) or the domain name(s) of the device(s), and the MAC address (in Cisco-style format) you want to find the port of.
+The parameters for the script are your username and password for the devices, the IP(s) or the domain name(s) of the 
+device(s), and the MAC address (in Cisco-style format) you want to find the port of.
 
 Example usage:
 ```
@@ -54,7 +57,7 @@ Test-3560-24PS#
 This script checks the IP protocols running on your Cisco router and returns the list of peers for each protocol
 running. It supports EIGRP, OSPF, and BGP.
 
-It has been tested on IOS, IOS-XE, and NX-OS.
+It has been tested on IOS and IOS-XE.
 
 ```
 .\CiscoIPProtoPeers.py <username> 192.168.174.132
