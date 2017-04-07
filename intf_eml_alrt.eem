@@ -1,0 +1,4 @@
+event manager applet mgmt_interface_UP
+event syslog pattern "Interface FastEthernet0, changed state to up"
+action 1.0 cli command "who"
+action 2.0 mail server "_your_smtp_svr_ip" to ".test@email.com." from ".switch1@email.com." subject ".MGMT_Interface_fa0_UP." body "Current users $_cli_result"
