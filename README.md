@@ -8,7 +8,7 @@ These scripts have been useful to me, but idk how useful they will be for others
   * Script that checks for a MAC address on a switch and reports back the port it lives on.
 * <a href='#ciscoipprotopeers'>CiscoIPProtoPeers</a>
   * Script that checks all of the BGP, OSPF, and EIGRP peers of this Cisco device and lists them.
-* <a href='#IntfEmlUp'>Intf Eml Up</a>
+* <a href='#IntfEmlUp'>IntfEmlUp</a>
   * EEM script that looks for a particular interface up event and sends an email alert.
 
 ### mac2port
