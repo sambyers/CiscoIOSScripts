@@ -1,19 +1,15 @@
 # CiscoIOSScripts
-Repo for useful Cisco IOS scripts made with <a href='https://github.com/paramiko/paramiko'>paramiko</a>.
+Repo for useful Cisco IOS scripts.
 
-Previously, I had a repo for each of the scripts, but that was messy. This will be the repo for all Cisco IOS scripts 
-that use paramiko. This is mostly for me to learn how to use Paramiko and to see what's possible.
-
-These scripts don't use any of the OnePK APIs. These scripts are for use with Cisco devices that don't have APIs and 
-require SSH for scripting. The scripts work with Python 2.7.8.
-
-These scripts have been useful to me, but idk how useful they will be for others. They're here if you need them.
+These scripts have been useful to me, but idk how useful they will be for others.
 
 ### Scripts
 * <a href='#mac2port'>mac2port</a>
   * Script that checks for a MAC address on a switch and reports back the port it lives on.
 * <a href='#ciscoipprotopeers'>CiscoIPProtoPeers</a>
   * Script that checks all of the BGP, OSPF, and EIGRP peers of this Cisco device and lists them.
+* <a href='#IntfEmlUp'>Intf Eml Up</a>
+  * EEM script that looks for a particular interface up event and sends an email alert.
 
 ### mac2port
 Quick Python script that finds the ports a MAC address lives on from Cisco IOS switches.
@@ -92,3 +88,7 @@ Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State
 10.0.0.1        4        65002      16      16        1    0    0 00:11:15        0
 
 ```
+
+### IntfEmlUp
+
+This script is simple to deploy. You can just paste it into an IOS or IOS-XE device that supports EEM or use your favorite configuration management tool. It will track syslog messages looking for a string and will send an email alert.
